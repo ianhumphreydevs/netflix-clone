@@ -107,7 +107,7 @@ function Modal() {
           <div className="space-y-6 text-lg">
             <div className="flex items-center space-x-2 text-sm">
               <p className="font-semibold text-green-400">
-                {movie!.vote_average * 10}% Match
+                {Math.round(movie!.vote_average * 10)}% Match
               </p>
               <p className="font-light">
                 {movie?.release_date || movie?.first_air_date}
@@ -119,6 +119,7 @@ function Modal() {
                 HD
               </div>
             </div>
+                <h1 className="font-bold text-xl">{movie?.title}</h1>
             <div className="overview flex flex-col gap-x-10 gap-y-4 font-light md:flex-row">
               <p className="overview__para w-5/6">{movie?.overview}</p>
               <div className="flex flex-col space-y-3 text-sm">

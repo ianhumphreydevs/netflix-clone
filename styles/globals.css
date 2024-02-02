@@ -46,6 +46,43 @@
     bg-[#2a2a2a]/60 transition hover:border-white hover:bg-white/10
   }
 
+  .plan__box {
+    @apply relative mx-1.5 flex h-20 bg-[#e50914] w-[calc(100%/3)] cursor-default
+    items-center justify-center rounded-sm font-semibold shadow after:absolute after:top-full
+    after:left-1/2 after:block after:-translate-x-1/2 after:border-8 after:border-b-0 
+    after:border-transparent after:border-t-[#e50914] after:content-[""] md:h-32 lg:mx-8;
+  }
+
+  .thumbnail__title {
+    position: absolute;
+    font-size: large;
+    text-align: center;
+    transform: scale(0);
+    visibility: hidden;
+    font: bolder;
+    font-size: 32px;
+    line-height: normal;
+    text-shadow: 10px;
+    overflow: hidden;
+  }
+
+  .thumbnail__img--wrapper:hover .thumbnail__title {
+    transform: scale(1);
+    visibility: visible;
+  }
+
+  .thumbnail__img--wrapper {
+    display: flex;
+    justify-content: center;
+    padding-top: 24px;
+  }
+
+  .thumbnail__img:hover {
+    opacity: 0.6;
+  }
+
+  
+
 
 }
 
